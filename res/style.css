@@ -1,0 +1,272 @@
+html, body {
+	padding: 0;
+	margin:0;
+}
+
+/* Общие настройки */
+body > div {
+	position: fixed;
+	z-index:-1;
+	background: RGBA(101,159,53, 0.1);
+	height:100%;
+	width:100%;
+}
+header, footer {
+	background: RGBA(70,135,219,0.9);
+	background: linear-gradient(135grad, RGBA(43,99,186,0.9) 0%, RGBA(139,179,233,0.8) 30%, RGBA(70,135,219,0.9) 85%);
+	color:white;
+	font-size:17px;
+}
+
+a,a:link,a:active,a:visited {
+	color: #fff;
+	text-decoration:none;
+}
+
+/* Шапка страницы */
+header {
+	padding: 10px 15px;
+	margin-bottom: 7px;
+}
+header::after {
+	display:table;
+	content: '';
+	clear:both;
+}
+
+header > div:first-child {
+	float:left;
+}
+
+header > div:first-child > label > a > * {
+	display: inline-block;
+	vertical-align:middle;
+}
+
+header > div:first-child > label > a > p {
+	margin:0;
+	text-transform:uppercase;
+	margin-left: 10px;
+	font-size:20px;
+	letter-spacing: 5px;
+	text-shadow: 3px 3px 3px gray;
+}
+
+header > div:first-child > label > a > img {
+	height: 50px;
+}
+
+header > div:last-child {
+	float:right;
+	margin: 10px 15px 0 0;
+}
+header > div:last-child > div {
+	padding:1px 0 0 0;
+	DISPLAY: inline-block;
+}
+header > div:last-child > div:hover {
+	padding:0px;
+}
+header > div:last-child > div > a {
+	color:white;
+	text-decoration:none;
+}
+header > div:last-child > div:not(:last-child)::after {
+	margin-left: 5px;
+	font-size: 20px;
+	content: '|';
+}
+
+/* Меню */
+nav {
+	display:inline-block;
+	vertical-align:top;
+	width: 20%;
+	box-sizing: border-box;
+	margin: 10px;
+}
+
+nav > a {
+	display: block;
+	width: 100%;
+	padding: 15px 10px;
+	box-sizing: inherit;
+	background: RGBA(70,135,219,0.9);
+	background: linear-gradient(150grad, RGBA(70,135,219,0.6) 0%, RGBA(43,99,186,0.75) 30%, RGBA(70,135,219,0.8) 75%, RGBA(70,135,219,0.4) 100%);
+	margin: 5px 0;
+	text-align:center;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	border-radius:5px;
+}
+nav > a::before,
+nav > a::after {
+	opacity:0;
+	content: '';
+	position: absolute;
+	height:2px;
+	width: 75%;
+	left:0;right:0;margin:0 auto;
+	background: rgba(255,255,255,0.3);
+	transition: 0.3s transform ease;
+}
+nav > a:hover::before,
+nav > a:hover::after {
+	opacity:1;
+}
+nav > a:hover::before{
+	top:1px;
+	transform: translateY(10px);
+}
+nav > a:hover::after {
+	bottom:1px;
+	transform: translateY(-10px);
+}
+
+/* каталог товаров */
+content {
+	display:inline-block;
+	vertical-align:top;
+	box-sizing: border-box;
+	width: 75%;
+	text-align:left;
+	margin-top: 10px;
+}
+
+content > article {
+	display: inline-block;
+	vertical-align:top;
+	box-sizing: inherit;
+	width: 30%;
+	margin: 1.5%;
+	position:relative;
+	padding: 10px 0;
+	background:RGBA(127,127,255,0.3);
+	border-radius:5px;
+	transition: 0.3s box-shadow, 0.3s background;
+}
+
+content > article:hover {
+	box-shadow: inset 0 0 1px 0.4px blue,
+				0 0 3px 1.5px green;
+}
+
+content > article > p::after {
+	content: ' руб.';
+}
+content > article > p {
+	position:absolute;
+	padding:1.5% 3%;
+	left: 5%;
+	top:3%;
+	color:white;
+	font-weight: bold;
+	background-image:linear-gradient(to bottom, RGB(63,200,63) 0%, RGB(63,127,63) 75%, RGB(63,200,63) 100%);
+	border: 0.5px solid RGB(63,200,63);
+	border-radius: 200px;
+}
+
+content > article > label {
+	width:95%;
+	box-sizing: inherit;
+	text-align:center;
+}
+content > article > label > a > img {
+	width: 93%;
+	display:block;
+	margin-left:2.5%;
+}
+content > article > label > a > p {
+	color: #000;
+	box-sizing: inherit;
+	width:95%;
+	margin: 0;
+	padding: 1% 3%;
+	min-height:50px;
+	display:inline-block;
+	vertical-align:middle;
+	font-weight: bold;
+}
+
+/* Просмотр отдельного товара */
+content > h1 {
+	font-size: 24px;
+	clear:both;
+	margin-left: 40px;
+}
+content > label {
+	display:block;
+	float:left;
+	width: 30%;
+	margin-right:10px;
+	background:RGB(255,255,255);
+	margin-left: 20px;
+}
+content > label > img {
+	width: 99%;
+}
+content > label > p {
+	font-weight:bold;
+	font-size:20px;
+	text-align:center;
+}
+content > label > p::after {
+	content: " руб."
+}
+content > div {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+content > div > * {
+	line-height:30px;
+	font-size: 20px;
+	text-indent:1.25em;
+	margin-top:0;
+	margin-bottom:0;
+}
+content > div > h2 {
+	font-size: 22px;
+}
+
+/* Подвал страницы */
+content::after {
+	content: '';
+	display: table;
+	clear:both;
+	margin-bottom: 50px; 
+}
+footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	padding: 10px 30px;
+	height:50px;
+	box-sizing:border-box;
+}
+footer > div {
+	vertical-align:middle;
+	display:inline-block;
+}
+footer > div:first-child {
+	float:left;
+}
+footer > div:last-child {
+	float:right;
+}
+footer > div:last-child > div {
+	display: inline-block;
+}
+footer > div:last-child > div > a {
+	text-decoration:none;
+}
+footer > div:last-child > div:not(:last-child)::after {
+	margin-left: 5px;
+	font-size: 20px;
+	content: '|';
+}
+footer::after {
+	content: '';
+	display: table;
+	clear:both;
+}

@@ -1,0 +1,151 @@
+@media(max-width:1080px) {
+	content > article {
+		width:29%;
+	}
+	content > article > label > a > p {
+		height: 75px;
+	}
+}
+
+@media (max-width:700px) {
+	content > label {
+		width:50%;
+	}
+}
+
+@media (max-width: 650px) {
+	footer > div:first-child {
+		margin: 0 0 0 5px;
+	}
+	footer > div:last-child {
+		margin: 0 5px 0 0;
+	}
+}
+
+@media (max-width:600px) {
+	header > div:last-child {
+		margin-top:0;
+	}
+	header > div:last-child > div {
+		display:block;
+		text-align:right;
+	}
+	header > div:last-child > div:after {
+		content: '';
+		display:none;
+	}
+	content > h1 {
+		margin-left:0;
+		text-align: center;
+	}
+	footer > div:first-child {
+		float:none;
+	}
+	footer > div:last-child {
+		display:none;
+	}
+}
+
+@media (max-width:530px) {
+	content > article > label > a > p {
+		height: 110px;
+	}
+	nav > a {
+		width: 100px;
+	}
+	content > article {
+		width:45%;
+	}
+	content > article > label > a > p {
+		height: 75px;
+	}
+}
+
+@media (max-width:500px) {
+	header > div {
+		float:none;
+		clear:both;
+		width:100%;
+	}
+	header > div:last-child {
+		text-align:center;
+		margin: 10px 0 0 0;
+	}
+	header > div:last-child > div {
+		display:inline-block;
+		text-align:right;
+	}
+	header > div:last-child > div:after {
+		display:inline-block;
+	}
+	nav {
+		width:95%;
+		margin-right:0;
+		margin-left: 15px;
+	}
+	nav > a {
+		display: inline-block;
+		width: 32%;
+	}
+	content {
+		width:95%;
+		margin-left: 15px;
+	}
+	content > article {
+		width:32%;
+		margin: 5px 0;
+		padding-bottom:25px;
+	}
+	content > article > p {
+		height: 20px;
+		margin:0 10px;
+		bottom:5px;
+		top:auto;
+	}
+	content > article > label > a > p {
+		height: 90px;
+	}
+	content:after {
+		content: '';
+		display: table;
+		clear:both;
+		margin-bottom: 50px;
+	}
+	footer {
+		text-align:center;
+	}
+}
+
+@media (max-width:420px) {
+	nav, content {
+		margin-left:2.5%;
+		text-align:center;
+	}
+	content > article {
+		width:100%;
+		padding-bottom:5px;
+	}
+	content > article > p {
+		left: 0;
+		top:10%;
+		bottom:auto;
+	}
+	content > article > label > a > p {
+		height: auto;
+		font-size: 18px;
+	}
+	content > label, content > div {
+		text-align:left;
+	}
+}
+
+@media (max-width:350px) {
+	content > label {
+		width:100%;
+		float:none;
+	}
+	content > div > h2 {
+		margin-top:10px;
+		text-align:center;
+	}
+}
